@@ -6,7 +6,11 @@ import (
 	"sync"
 )
 
+//负责与外部交互，控制缓存存储和获取的主流程
+
+
 // A Group is a cache namespace and associated data loaded spread over
+//Group模块是对外提供服务接⼝的部分，⼀个Group就是⼀个缓存空间
 type Group struct {
 	name      string
 	getter    Getter
