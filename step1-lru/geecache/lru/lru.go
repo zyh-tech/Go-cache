@@ -2,6 +2,7 @@ package lru
 
 import "container/list"
 
+//使用哈希表和双向链表实现LRU缓存
 // Cache is a LRU cache. It is not safe for concurrent access.
 type Cache struct {
 	maxBytes int64
@@ -12,10 +13,12 @@ type Cache struct {
 	OnEvicted func(key string, value Value)
 }
 
+
 type entry struct {
 	key   string
 	value Value
 }
+
 
 // Value use Len to count how many bytes it takes
 type Value interface {
