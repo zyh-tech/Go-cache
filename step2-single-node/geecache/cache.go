@@ -5,6 +5,8 @@ import (
 	"sync"
 )
 
+//使用互斥锁以实现并发执行
+
 type cache struct {
 	mu         sync.Mutex
 	lru        *lru.Cache
