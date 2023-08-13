@@ -1,7 +1,3 @@
-// Copyright 2021 Peanutzhen. All rights reserved.
-// Use of this source code is governed by a MIT style
-// license that can be found in the LICENSE file.
-
 package consistenthash
 
 // consistenthash 模块负责实现一致性哈希
@@ -28,7 +24,7 @@ type Consistency struct {
 func (c *Consistency) Register(peersName ...string) {
 	for _, peerName := range peersName {
 		for i := 0; i < c.replicas; i++ {
-			hashValue := int(c.hash([]byte(strconv.Itoa(i)+peerName)))
+			hashValue := int(c.hash([]byte(strconv.Itoa(i) + peerName)))
 			c.ring = append(c.ring, hashValue)
 			c.hashmap[hashValue] = peerName
 		}

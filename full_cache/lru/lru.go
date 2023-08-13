@@ -1,7 +1,3 @@
-// Copyright 2021 Peanutzhen. All rights reserved.
-// Use of this source code is governed by a MIT style
-// license that can be found in the LICENSE file.
-
 package lru
 
 // lru 包实现了使用最近最久未使用使用算法的缓存功能

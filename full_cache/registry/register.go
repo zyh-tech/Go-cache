@@ -1,7 +1,3 @@
-// Copyright 2021 Peanutzhen. All rights reserved.
-// Use of this source code is governed by a MIT style
-// license that can be found in the LICENSE file.
-
 package registry
 
 // register模块提供服务Service注册至etcd的能力
@@ -9,10 +5,11 @@ package registry
 import (
 	"context"
 	"fmt"
-	clientv3 "go.etcd.io/etcd/client/v3"
-	"go.etcd.io/etcd/client/v3/naming/endpoints"
 	"log"
 	"time"
+
+	clientv3 "go.etcd.io/etcd/client/v3"
+	"go.etcd.io/etcd/client/v3/naming/endpoints"
 )
 
 var (

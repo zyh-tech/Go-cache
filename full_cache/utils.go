@@ -1,4 +1,3 @@
-
 package peanutcache
 
 import (
